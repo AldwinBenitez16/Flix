@@ -1,0 +1,15 @@
+.ListOverlay {
+    width: 100%;
+}
+
+.Disabled {
+    color: #666;
+}
+
+@media (min-width: 750px) {
+    .ListOverlay {
+    }
+    
+    .ListOverlay div {
+    }
+}

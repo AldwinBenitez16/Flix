@@ -1,0 +1,41 @@
+.ListsForm {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px;
+    width: 100%;
+    color: #4632c2;
+    border: 1px solid #4632c2;
+    background-color: rgba(150, 140, 209, .3);
+}
+
+.ListsForm input,
+.ListsForm textarea {
+    box-sizing: border-box;
+    width: 80%;
+    border: none;
+    padding: 10px;
+    margin: 5px 0;
+} 
+
+.ListsForm textarea {
+    min-height: 200px;
+}
+
+.UpdatedButton {
+    height: 25px;
+    margin: 5px 0;
+    width: 80%;
+    background-color: #ccc;
+}
+
+.Hide {
+    display: none;
+}
+
+.Show {
+    display: flex;
+}

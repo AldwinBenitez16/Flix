@@ -1,0 +1,21 @@
+.UserControls {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 100%;
+    max-width: 350px;
+    padding: 10px;
+    box-shadow: 3px 3px 10px #637899;
+}
+
+.UpdatedButton {
+    height: 40px;
+}
+
+@media(min-width: 750px) {
+    .UserControls button {
+        width: fit-content;
+        margin-bottom: 5px;
+    }
+}

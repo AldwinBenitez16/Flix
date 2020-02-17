@@ -1,0 +1,39 @@
+.Button {
+    border: none;
+    border-radius: 2px;
+    transition: background-color .2s ease-in;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.Button:hover {
+    background-color: #c7416f;
+}
+
+.Button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.Danger {
+    background-color: #7e262c;
+}
+
+.Success {
+    background-color: #c97793;
+}
+
+.Mini {
+    height: 35px;
+    width: 35px;
+    background-color: #fff;
+    color: #c97793;
+    transition: color .2s ease-out; 
+}
+
+.Mini:hover {
+    color: #fff;
+}

@@ -1,0 +1,26 @@
+.NavigationItem {
+    box-sizing: border-box;
+    display: block;
+    font-size: 1.3rem !important;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-top: 16px;
+}
+
+.NavigationItem a {
+    color: #FFFDE4;
+    text-decoration: none; 
+    transition: color .2s ease-in;
+}
+
+.NavigationItem a:hover,
+.NavigationItem a:active,
+.NavigationItem .active {
+    color: #c7416f;
+}
+
+@media (min-width: 1000px) {
+    .NavigationItem {
+        font-size: 1.8rem !important;
+    }
+}

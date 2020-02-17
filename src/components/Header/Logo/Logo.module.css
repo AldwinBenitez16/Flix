@@ -1,0 +1,80 @@
+.Logo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.Logo a {
+    display: block;
+    text-decoration: none;
+}
+
+.LogoLetters {
+    margin: 0;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.D_Mob {
+    display: inline;
+}
+
+.R_Extend {
+    display: none;
+}
+
+.M_Extend {
+    display: none;
+}
+
+.First {
+    color: #c7416f;
+}
+
+.Second {
+    color: white;
+}
+
+@media(min-width: 500px) {
+    .D_Mob {
+        display: none;
+    }
+
+    .R_Extend {
+        display: inline;
+    }
+    
+    .M_Extend {
+        display: inline;
+    }    
+}
+
+@media (min-width: 800px) {
+    .Logo {
+        width: auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        border: none;
+    }
+    
+    .Logo a {
+        display: block;
+        width: inherit;
+    }
+    
+    .Logo img {
+        min-height: 100%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .LogoLetters {
+        font-size: 3rem !important;
+    }
+}

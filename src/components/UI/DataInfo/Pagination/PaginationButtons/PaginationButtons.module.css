@@ -1,0 +1,26 @@
+.ButtonExtends {
+    display: none;
+}
+
+.UpdatedButtons {
+    margin: 2px;
+    width: 20px;
+    color: #fff;
+    background-color: #c97793;
+}
+
+.UpdateButtons:hover {
+    color: #c7416f;
+}
+
+@media(min-width: 411px) {
+    .UpdatedButtons {
+        width: 25px;
+    }
+}
+
+@media(min-width: 546px) {
+    .ButtonExtends {
+        display: initial;
+    }
+}

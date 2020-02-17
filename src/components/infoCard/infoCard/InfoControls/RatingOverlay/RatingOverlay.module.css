@@ -1,0 +1,35 @@
+.Rating {
+    position: relative;
+    margin-bottom: 25px;
+    width: 120px;
+    height: 24px;
+}
+
+.Rating svg {
+    fill: #c97793;
+}
+
+.RatingOverlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 24px;
+    background-color: #ededed;
+    overflow: hidden;
+    text-align: right;
+}
+
+.RatingOverlay svg {
+    display: inline;
+    fill: #ccc;
+}
+
+.Hide {
+    display: none !important;
+}
+
+@media(min-width: 546px) {
+    .Rating {
+        margin-bottom: 0;
+    }
+}
