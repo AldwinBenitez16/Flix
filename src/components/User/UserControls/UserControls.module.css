@@ -9,6 +9,15 @@
     box-shadow: 3px 3px 10px #637899;
 }
 
+.ControlsContainer {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.ControlsContainer button:last-child {
+    margin-right: 0;
+}
+
 .UpdatedButton {
     height: 40px;
 }

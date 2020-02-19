@@ -1,12 +1,31 @@
 import React from 'react';
 
+import ListDropdown from '../../Lists/ListsControls/ListsDropdown/ListsDropdown';
+
+import { ReactComponent as AddListIcon } from '../../../../assets/images/svgs/add.svg';
+
 import styles from './ListControl.module.css';
 
 const listControl = () => {
     return (
         <div className={styles.ListControl}>
-            <header>Lists</header>
+            <div style={{
+                display: 'flex'
+            }}>
+                <header>Lists</header>
+                <AddListIcon style={{
+                    marginLeft: 'auto',
+                    cursor: 'pointer'
+                }} />
+            </div>
             <hr/>
+            <ListDropdown 
+                show={true} 
+                listType="user"
+                addList={() => {}}
+                showItems={() => {}}
+                toggleLists={() => {}}
+                toggleShowForm={() => {}}/>
         </div>
     );
 };
