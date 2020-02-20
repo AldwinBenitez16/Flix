@@ -10,6 +10,7 @@ import Lists from '../../components/User/Lists/Lists';
 import UserPage from '../../components/User/UserPage/UserPage';
 import UserControls from '../../components/User/UserControls/UserControls';
 import ControlsButton from '../../components/User/ControlsButton/ControlsButtons';
+import Backdrop from '../../components/UI/Backdrop/Backdrop';
 
 // HOC
 import PageWrapper from '../../hoc/PageWrapper/PageWrapper';
@@ -85,6 +86,9 @@ class User extends Component {
                 [type]: {
                     ...prevState[type],
                     show: true
+                },
+                controls: {
+                    show: false
                 }
             };
         });
@@ -177,6 +181,7 @@ class User extends Component {
         }
         return(
             <div className={styles.User}>
+                <Backdrop styling={styles.BackdropStyling} show={this.state.controls.show} clicked={this.toggleShowControls} />
                 <UserControls 
                     toggleShowControls={this.toggleShowControls}
                     show={this.state.controls.show}

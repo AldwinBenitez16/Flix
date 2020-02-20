@@ -5,13 +5,14 @@
     flex-direction: column;
     background-color: #efefef;
     height: 100%;
-    width: 25%;
     padding: 10px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
     border-right: 4px solid rgba(70, 50, 194, .75);
-    left: -25%;
     transition: left .3s ease-out;
+    border-radius: 0;
+    width: 100%;
+    left: -100%;
+    border-right-width: 5px;
+    z-index: 160;
 }
 
 .Show {
@@ -40,7 +41,19 @@
 }
 
 @media(min-width: 750px) {
+    .UserControls {
+        width: 40%;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+
     .UserControls button {
         margin-bottom: 5px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .UserControls {
+        width: 25%;
     }
 }
