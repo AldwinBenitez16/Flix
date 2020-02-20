@@ -21,13 +21,23 @@ import styles from './UserControls.module.css';
  */
 
 const userControls = (props) => {
+
+    let visible = null;
+    if(props.show) {
+        visible = styles.Show;
+    }
     return (
-        <div className={styles.UserControls}>
+        <div className={[styles.UserControls, visible].join(' ')}>
             <div className={styles.ControlsContainer}>
                 <UserControl showHandler={props.showHandler} category="Favorites" />
                 <UserControl showHandler={props.showHandler} category="Rated" />
                 <UserControl showHandler={props.showHandler} category="WatchList" />
+                <Button
+                action="Exit"
+                type="Mini"
+                clicked={props.toggleShowControls}>X</Button>
             </div>
+            <hr />
             <ListControl />
         </div>
     );

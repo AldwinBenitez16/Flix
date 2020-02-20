@@ -9,6 +9,7 @@ import Spinner from '../../components/UI/Spinner/Spinner';
 import Lists from '../../components/User/Lists/Lists';
 import UserPage from '../../components/User/UserPage/UserPage';
 import UserControls from '../../components/User/UserControls/UserControls';
+import ControlsButton from '../../components/User/ControlsButton/ControlsButtons';
 
 // HOC
 import PageWrapper from '../../hoc/PageWrapper/PageWrapper';
@@ -34,6 +35,9 @@ class User extends Component {
         Rated: {
             show: false,
             page: 1
+        },
+        controls: {
+            show: false
         }
     }
 
@@ -125,6 +129,17 @@ class User extends Component {
         });
     }
 
+    toggleShowControls = () => {
+        this.setState(prevState => {
+            return {
+                controls: {
+                    ...prevState.controls,
+                    show: !prevState.controls.show
+                }
+            };
+        });
+    };
+
     render() {
         let user = <Spinner />;
         if(this.props.user.accountID && !this.props.loading) {
@@ -162,7 +177,11 @@ class User extends Component {
         }
         return(
             <div className={styles.User}>
-                <UserControls showHandler={this.showHandler} />
+                <UserControls 
+                    toggleShowControls={this.toggleShowControls}
+                    show={this.state.controls.show}
+                    showHandler={this.showHandler} />
+                <ControlsButton clicked={this.toggleShowControls} />
                 {user}
             </div>
         );

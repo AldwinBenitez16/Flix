@@ -12,13 +12,11 @@ const listControl = () => {
             <div style={{
                 display: 'flex'
             }}>
-                <header>Lists</header>
-                <AddListIcon style={{
+                {/* <AddListIcon style={{
                     marginLeft: 'auto',
                     cursor: 'pointer'
-                }} />
+                }} /> */}
             </div>
-            <hr/>
             <ListDropdown 
                 show={true} 
                 listType="user"

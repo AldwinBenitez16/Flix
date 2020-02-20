@@ -1,17 +1,34 @@
 .UserControls {
+    position: absolute;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #efefef;
     height: 100%;
-    max-width: 350px;
+    width: 25%;
     padding: 10px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-right: 4px solid rgba(70, 50, 194, .75);
+    left: -25%;
+    transition: left .3s ease-out;
+}
+
+.Show {
     box-shadow: 3px 3px 10px #637899;
+    left: 0;
+}
+
+.UserControls hr {
+    color: #4632c2; 
+    border: none;
+    border-top: 2px solid #c97793; 
+    height: 2px;
+    margin: 5px 0 10px 0;
 }
 
 .ControlsContainer {
     display: flex;
-    margin-bottom: 5px;
 }
 
 .ControlsContainer button:last-child {
