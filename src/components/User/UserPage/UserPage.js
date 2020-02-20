@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 // Components
 import DataInfo from '../../UI/DataInfo/DataInfo';
 
+import styles from './UserPage.module.css';
 
 // HOC
 import DataWrapper from '../../../hoc/DataWrapper/DataWrapper';
@@ -22,8 +23,10 @@ class UserPage extends Component {
             mediaIsFetched,
             mediaItems
         } = this.props;
+        let visible = styles.Hide;
         let pageContent = null;
         if(show) {
+            visible = styles.Show;
             pageContent = (
                 <Fragment>
                     <DataInfo 
@@ -54,7 +57,7 @@ class UserPage extends Component {
             );
         }
         return (
-            <div>
+            <div className={[styles.UserPage, visible].join(' ')} >
                 {pageContent}
             </div>
         );

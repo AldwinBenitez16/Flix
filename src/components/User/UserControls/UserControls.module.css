@@ -24,7 +24,6 @@
 
 @media(min-width: 750px) {
     .UserControls button {
-        width: fit-content;
         margin-bottom: 5px;
     }
 }

@@ -163,7 +163,7 @@ class User extends Component {
         return(
             <div className={styles.User}>
                 <UserControls showHandler={this.showHandler} />
-                {/* {user} */}
+                {user}
             </div>
         );
     }

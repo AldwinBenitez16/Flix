@@ -1,0 +1,15 @@
+.UserPage {
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.Hide {
+    display: none;
+}
+
+.Show {
+    display: block;
+}

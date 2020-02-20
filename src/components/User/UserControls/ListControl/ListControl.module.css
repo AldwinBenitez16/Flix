@@ -2,13 +2,14 @@
     box-sizing: border-box;
     padding: 20px;
     height: calc(100% - 36px);
-    border: 2px solid #1f165c;
+    border: 2px solid #4632c2;
+    overflow-y: scroll;
 }
 
 .ListControl hr {
-    color: #1f165c;
+    color: #4632c2;
     border: none;
-    border: 1px solid #c97793;
+    border: 1px solid #c97793; 
 }
 
 .UserControl header {
