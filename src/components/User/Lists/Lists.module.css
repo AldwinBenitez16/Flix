@@ -1,0 +1,8 @@
+.Lists {
+    width: 80%;
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 10px;
+    overflow-y: scroll;
+    border-right: 10px solid rgba(199, 65, 111, .8);
+}

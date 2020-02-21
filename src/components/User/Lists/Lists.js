@@ -7,6 +7,8 @@ import * as actions from '../../../store/actions/index';
 import ListControls from './ListsControls/ListControls';
 import ListsPages from './ListPages/ListPages';
 
+import styles from './Lists.module.css';
+
 class Lists extends Component {
 
     state = {
@@ -62,8 +64,8 @@ class Lists extends Component {
             let list = null;
             if(this.props.show) {
                 list = (
-                    <Fragment>
-                        <ListControls 
+                    <div className={styles.Lists}>
+                        {/* <ListControls 
                             showLists={this.state.showLists}
                             toggleShowLists={this.toggleShowListsHandler}
                             showForm={this.state.form.show}
@@ -74,20 +76,16 @@ class Lists extends Component {
                             changeFormKey={this.changeFormKeyHandler}
                             titleValue={this.state.form.title}
                             descValue={this.state.form.desc}
-                            createNewList={this.createNewListHandler}/>
+                            createNewList={this.createNewListHandler}/> */}
                             
                         <ListsPages 
                             accountLists={this.props.accountLists}
                             list={this.props.list}
                             viewInfo={this.props.viewInfo}/>
-                    </Fragment>
+                    </div>
                 );
             }
-            return(
-                <div>
-                    {list}
-                </div>
-            );
+            return list;
         }
     }; 
 

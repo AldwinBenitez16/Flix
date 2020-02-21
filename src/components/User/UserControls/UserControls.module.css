@@ -20,16 +20,9 @@
     left: 0;
 }
 
-.UserControls hr {
-    color: #4632c2; 
-    border: none;
-    border-top: 2px solid #c97793; 
-    height: 2px;
-    margin: 5px 0 10px 0;
-}
-
 .ControlsContainer {
     display: flex;
+    margin-bottom: 5px;
 }
 
 .ControlsContainer button:last-child {
@@ -43,12 +36,6 @@
 @media(min-width: 750px) {
     .UserControls {
         width: 40%;
-        border-top-right-radius: 25px;
-        border-bottom-right-radius: 25px;
-    }
-
-    .UserControls button {
-        margin-bottom: 5px;
     }
 }
 

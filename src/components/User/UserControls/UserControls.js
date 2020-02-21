@@ -37,8 +37,11 @@ const userControls = (props) => {
                 type="Mini"
                 clicked={props.toggleShowControls}>X</Button>
             </div>
-            <hr />
-            <ListControl />
+            <ListControl
+                addList={props.addList}
+                showItems={props.showItems}
+                closeControls={props.toggleShowControls}
+                showHandler={props.showHandler} />
         </div>
     );
 };

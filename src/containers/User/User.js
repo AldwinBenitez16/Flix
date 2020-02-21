@@ -22,11 +22,11 @@ class User extends Component {
 
     state = {
         Lists: {
-            show: false,
+            show: true,
             showListItems: {}
         },
         Favorites: {
-            show: true,
+            show: false,
             page: 1
         },
         WatchList: {
@@ -38,7 +38,7 @@ class User extends Component {
             page: 1
         },
         controls: {
-            show: false
+            show: true
         }
     }
 
@@ -112,6 +112,7 @@ class User extends Component {
     };
 
     showItemsHandler = (id) => {
+        this.showHandler('Lists');
         this.setState(prevState => {
             let listItems = {};
             for(let key in prevState.Lists.showListItems) {
@@ -155,6 +156,7 @@ class User extends Component {
                         sessionID={this.props.sessionID}
                         addList={this.addListHandler}
                         showItems={this.showItemsHandler}
+                        showHandler={this.showHandler}
                         list={this.state.Lists.showListItems}>
                         <Lists />
                     </PageWrapper>
@@ -185,7 +187,9 @@ class User extends Component {
                 <UserControls 
                     toggleShowControls={this.toggleShowControls}
                     show={this.state.controls.show}
-                    showHandler={this.showHandler} />
+                    showHandler={this.showHandler}
+                    addList={this.addListHandler}
+                    showItems={this.showItemsHandler} />
                 <ControlsButton clicked={this.toggleShowControls} />
                 {user}
             </div>

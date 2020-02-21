@@ -6,23 +6,22 @@ import { ReactComponent as AddListIcon } from '../../../../assets/images/svgs/ad
 
 import styles from './ListControl.module.css';
 
-const listControl = () => {
+const listControl = (props) => {
     return (
         <div className={styles.ListControl}>
-            <div style={{
-                display: 'flex'
-            }}>
-                {/* <AddListIcon style={{
-                    marginLeft: 'auto',
-                    cursor: 'pointer'
-                }} /> */}
+            <div className={styles.ListContainer}>
+                <header>Lists</header>
+                <button>
+                <AddListIcon />
+                </button>
             </div>
+            <hr />
             <ListDropdown 
                 show={true} 
                 listType="user"
-                addList={() => {}}
-                showItems={() => {}}
-                toggleLists={() => {}}
+                addList={props.addList}
+                showItems={props.showItems}
+                toggleLists={props.closeControls}
                 toggleShowForm={() => {}}/>
         </div>
     );

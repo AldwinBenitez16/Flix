@@ -16,7 +16,7 @@
 }
 
 .ListsDropdown li:hover {
-    background-color: rgba(150, 140, 209, .8);
+    background-color: rgba(150, 140, 209, 1);
 }
 
 .Hide {
@@ -28,5 +28,7 @@
 }
 
 .Center {
+    padding: 10px;
     text-align: center;
+    background-color: rgba(150, 140, 209, .5)
 };

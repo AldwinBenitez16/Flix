@@ -23,6 +23,7 @@ const listControls = (props) => {
                 show={props.showLists} 
                 listType="user"
                 addList={props.addList}
+                showHandler={props.showHandler}
                 showItems={props.showItems}
                 toggleLists={props.toggleShowLists}
                 toggleShowForm={props.toggleShowForm}/>

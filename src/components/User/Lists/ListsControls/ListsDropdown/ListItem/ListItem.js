@@ -55,6 +55,7 @@ class ListItem extends Component {
             onAddMedia,
             accountLists,
             onRemoveMedia,
+            showHandler,
             ...rest } = this.props;
 
         let listControls = null;
@@ -67,7 +68,10 @@ class ListItem extends Component {
                         onClick={this.clearListHandler}/>
                     <Delete 
                         title="Delete List"
-                        onClick={this.deleteListHandler}/>
+                        onClick={() => {
+                            this.deleteListHandler();
+                            showHandler('Favorites');
+                        }}/>
                 </div>
             );
             list = <li 
