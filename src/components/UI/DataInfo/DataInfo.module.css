@@ -3,7 +3,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 100%;
     width: fit-content;
     background-color: #fff;
     box-shadow: 3px 3px 10px #637899;
@@ -15,7 +14,6 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    height: 100%;
     width: 100%;
     margin: 0 auto;
 }
@@ -29,9 +27,11 @@
 
 .DataInfo h2,
 .UserDataInfo h2 {
-    color: #4632c2;
-    margin: 0;
-    margin: 25px;
+    color: white;
+    margin: 25px 0;
+    border: 1px solid grey;
+    background-color: rgba(70, 50, 194, .75);
+    padding: 20px;
 }
 
 .DataInfo img,
@@ -45,6 +45,7 @@
     width: calc(50% - 6px);
     margin: 3px;
     cursor: pointer;
+    max-width: 150px;
 }
 
 @media(min-width: 411px) {

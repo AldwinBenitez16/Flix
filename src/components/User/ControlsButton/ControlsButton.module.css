@@ -1,14 +1,32 @@
 .ControlsButton {
     position: absolute;
-    top: 25px;
-    left: 25px;
-    width: 75px;
-    height: 75px;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
     box-shadow: 1px 1px 5px #637899;
     border: none;
     background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.ControlsButton:hover {
+.ControlsButton svg {
+    cursor: pointer;
+    fill: #c97793;
+    transition: fill .2s ease-in-out;
+}
 
+.ControlsButton svg:hover {
+    fill: #c7416f;
+}
+
+@media (min-width: 768px) {
+    .ControlsButton {
+        top: 25px;
+        left: 25px;
+        width: 75px;
+        height: 75px;
+    }
 }

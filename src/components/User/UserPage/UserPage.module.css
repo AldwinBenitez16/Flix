@@ -5,7 +5,6 @@
     background-color: #fff;
     padding: 10px;
     width: 100%;
-    margin-left: auto;
 }
 
 .Hide {
@@ -14,4 +13,13 @@
 
 .Show {
     display: block;
+}
+
+@media(min-width: 900px) {
+    .UserPage {
+        width: 80%;
+        margin: 20px auto;
+        border-right: 10px solid rgba(199, 65, 111, .8);
+        height: calc(100% - 40px);
+    }
 }

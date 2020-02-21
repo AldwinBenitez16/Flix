@@ -19,12 +19,11 @@ class Explore extends Component {
         exploreTvShows: false
     }
 
-    toggleShowGenres = () => {
-        this.setState(prevState => {
-            return {
-                exploreMovies: !prevState.exploreMovies,
-                exploreTvShows: !prevState.exploreTvShows
-            };
+    ShowGenres = (type) => {
+        this.setState({
+            exploreMovies: false,
+            exploreTvShows: false,
+            [type]: true
         });
     }
 
@@ -39,11 +38,11 @@ class Explore extends Component {
                     <Button
                         action="Explore Movie Genres"
                         type="Success"
-                        clicked={this.toggleShowGenres}>Movies</Button>
+                        clicked={() => this.ShowGenres('exploreMovies')}>Movies</Button>
                     <Button
                         action="Explore Tv Shows Genres"
                         type="Success"
-                        clicked={this.toggleShowGenres}>Tv Shows</Button>
+                        clicked={() => this.ShowGenres('exploreTvShows')}>Tv Shows</Button>
                 </div>
                 <DataWrapper path={`/genre/movie/list?api_key=${apiKey}&language=en-US`}>
                     <GenreList 

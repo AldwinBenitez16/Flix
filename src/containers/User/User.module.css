@@ -4,7 +4,7 @@
     height: calc(100vh - 300px);
     width: 100%;
     box-sizing: border-box;
-    background-color: #fff;
+    background-color: rgba(70, 50, 194, .65);
 }
 
 .BackdropStyling {

@@ -1,6 +1,6 @@
 // Dependencies
 import React from 'react';
-import { ternary } from '../../../shared/Utillity/Utillity';
+import { ternary, capitalize } from '../../../shared/Utillity/Utillity';
 import { connect } from 'react-redux';
 
 // Components
@@ -54,11 +54,11 @@ const dataInfo = (props) => {
                 page={props.data.page} />;
         }
     }
-
+    console.log(props.type);
     return (
         <div className={[dataStyles, ...addClass].join(' ')}>
             <div className={dataTitle}>
-                <h2>{props.title}</h2>
+                <h2>{`${props.title} - ${capitalize(props.type)}`}</h2>
             </div>
             {dataItems}
             {pagination}
