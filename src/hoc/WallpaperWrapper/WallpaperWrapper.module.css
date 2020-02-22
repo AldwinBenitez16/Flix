@@ -1,3 +1,7 @@
+.WallPaperWrapper {
+    margin: 0;
+}
+
 .Loading {
     height: calc(100vh - 75px);
     width: 100%;
@@ -6,4 +10,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media(min-width: 768px) {
+    .WallPaperWrapper {
+        margin: 25px;
+    }
 }

@@ -10,6 +10,9 @@ import Spinner from '../Spinner/Spinner';
 // CSS
 import styles from './DataInfo.module.css';
 
+import { ReactComponent as MovieIcon } from '../../../assets/images/svgs/movie-icon.svg';
+import { ReactComponent as TvIcon } from '../../../assets/images/svgs/tv-icon.svg';
+
 const dataInfo = (props) => {
     let dataItems = (
         <div className={styles.Loading}>
@@ -20,9 +23,14 @@ const dataInfo = (props) => {
     let dataStyles = styles.DataInfo;
     let dataTitle = styles.DataTitle;
     let addClass = [];
-    let title = props.title;
+    let title = <h2>{props.title}</h2>;
     if(props.type) {
-        title = `${props.title} ${'-' + ' ' + capitalize(props.type)}`;
+        if(props.type === 'movie') {
+            title = <h2><span>{props.title}</span> <MovieIcon /></h2>;
+        }
+        if(props.type === 'tv') {
+            title = <h2><span>{props.title}</span> <TvIcon /></h2>;
+        }
     }
     if(props.addClass) {
         addClass = props.addClass;
@@ -62,7 +70,7 @@ const dataInfo = (props) => {
     return (
         <div className={[dataStyles, ...addClass].join(' ')}>
             <div className={dataTitle}>
-                <h2>{title}</h2>
+                {title}
             </div>
             {dataItems}
             {pagination}

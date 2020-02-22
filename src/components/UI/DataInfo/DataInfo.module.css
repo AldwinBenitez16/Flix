@@ -32,6 +32,18 @@
     border: 1px solid grey;
     background-color: rgba(70, 50, 194, .75);
     padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.DataInfo h2 svg,
+.UserDataInfo h2 svg {
+    fill: white;
+}
+
+.DataInfo h2 span,
+.UserDataInfo h2 span {
+    margin-right: auto;
 }
 
 .DataInfo img,

@@ -59,6 +59,7 @@ class App extends Component {
             {userRoute}
             <Route path="/logout" component={LogOut}/> 
             <Route path="/genre/:genre" render={(props) => <PageWrapper {...props}  ><GenrePage /></PageWrapper>} />
+            <Route path="/search/:type/:query-:page" component={Search} />
             <Route path="/info/:type/:title" component={Info}/>
             <Route render={() => <h2>Page Not Found!</h2>}/>
           </Switch>

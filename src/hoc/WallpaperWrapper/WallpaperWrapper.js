@@ -35,8 +35,7 @@ class WallpaperWrapper extends Component {
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             position: 'relative',
-            height: 'calc(100vh - 150px)',
-            margin: '25px'
+            height: 'calc(100vh - 150px)'
         };
         let WallpaperContent = (
             <div className={styles.Loading}>
@@ -45,7 +44,7 @@ class WallpaperWrapper extends Component {
         );
         if(this.state.backdropPath.length > 0) {
             WallpaperContent = (
-                <div style={backgroundStyles}>
+                <div className={styles.WallPaperWrapper} style={backgroundStyles}>
                     <Overlay />
                     {this.props.children}
                 </div>

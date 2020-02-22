@@ -43,7 +43,7 @@ class Search extends Component {
                 <DataWrapper path={`/search/${this.state.type}?api_key=${apiKey}&language=en-US&query=${this.state.query}&page=${this.state.page}&include_adult=false`}>
                     <DataInfo 
                         changePage={this.changePageHandler}
-                        title={`[${this.state.type}] - ${this.state.query}`}
+                        title={this.state.query}
                         page={this.state.page}
                         viewInfo={this.viewInfoHandler}
                         type={this.state.type} />
