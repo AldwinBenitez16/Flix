@@ -33,6 +33,38 @@
     height: 40px;
 }
 
+.LoginOverlay,
+.SignupOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(74, 77, 82, .8);
+    border-right: 10px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4632c2;
+}
+
+.SignupOverlay {
+    box-sizing: border-box;
+    background-color: transparent;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.SignupOverlay a {
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.SignupOverlay p {
+    color: #fff;
+    text-align: center;
+}
+
 @media(min-width: 750px) {
     .UserControls {
         width: 40%;

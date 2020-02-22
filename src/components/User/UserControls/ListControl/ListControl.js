@@ -43,7 +43,11 @@ class ListControl extends Component {
     };
 
     createNewListHandler = () => {
-        const { sessionID, onCreateNewList } = this.props;
+        const { sessionData, onCreateNewList } = this.props;
+        let sessionID = null;
+        if(sessionData) {
+            sessionID = sessionData.session_id;
+        }
         onCreateNewList(sessionID, this.state.Form.title, this.state.Form.desc);
     }
 
@@ -63,8 +67,13 @@ class ListControl extends Component {
             addList,
             showItems,
             closeControls,
-            showHandler
+            showHandler,
+            isGuest
         } = this.props;
+
+        if(isGuest && this.state.Lists.show) {
+            this.showFormHandler('Form');
+        }
 
         let formButton = <AddListIcon onClick={() => this.showFormHandler('Form')} />;
         if(this.state.Form.show) {
@@ -102,7 +111,7 @@ class ListControl extends Component {
 const mapStateToProps = state => {
     return {
         accountLists: state.info.accountLists,
-        sessionID: state.auth.sessionIdData.session_id
+        sessionData: state.auth.sessionIdData
     };
 };
 

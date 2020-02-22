@@ -43,7 +43,13 @@ class User extends Component {
     }
 
     componentDidMount() {
-        const {user, isGuest, onFetchAccountDetails, onFetchAccountLists, onFetchAccountMediaState, sessionID, accountLists, accountID, mediaItems, medisIsFetched} = this.props;
+        const {user, isGuest, onFetchAccountDetails, onFetchAccountLists, onFetchAccountMediaState, sessionData, accountLists, accountID, mediaItems, medisIsFetched} = this.props;
+        
+        let sessionID = null;
+        if(sessionData) {
+            sessionID = sessionData.session_id;
+        }
+
         if(user.accountID === null) {
             onFetchAccountDetails(sessionID);
         }
@@ -146,14 +152,21 @@ class User extends Component {
     };
 
     render() {
-        let user = <Spinner />;
+        let user = null;
+        let sessionID = null;
+        if(this.props.isGuest && !this.state.controls.show) {
+            this.toggleShowControls();
+        }
         if(this.props.user.accountID && !this.props.loading) {
+            if(this.props.sessionData) {
+                sessionID = this.props.sessionData.session_id;
+            }
             user = (
                 <Fragment>
                     <PageWrapper
                         show={this.state.Lists.show}
                         accountID={this.props.user.accountID}
-                        sessionID={this.props.sessionID}
+                        sessionID={sessionID}
                         addList={this.addListHandler}
                         showItems={this.showItemsHandler}
                         showHandler={this.showHandler}
@@ -189,7 +202,8 @@ class User extends Component {
                     show={this.state.controls.show}
                     showHandler={this.showHandler}
                     addList={this.addListHandler}
-                    showItems={this.showItemsHandler} />
+                    showItems={this.showItemsHandler}
+                    isGuest={this.props.isGuest} />
                 <ControlsButton clicked={this.toggleShowControls} />
                 {user}
             </div>
@@ -202,7 +216,7 @@ const mapStateToProps = state => {
         user: state.user,
         accountID: state.user.accountID,
         loading: state.user.loading,
-        sessionID: state.auth.sessionIdData.session_id,
+        sessionData: state.auth.sessionIdData,
         accountLists: state.info.accountLists,
         mediaItems: state.info.mediaItems,
         medisIsFetched: state.info.mediaIsFetched,

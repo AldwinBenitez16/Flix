@@ -1,5 +1,5 @@
 // Dependencies
-import React from 'react';
+import React, { Fragment } from 'react';
 
 // Components
 import Button from '../../UI/Button/Button';
@@ -26,6 +26,18 @@ const userControls = (props) => {
     if(props.show) {
         visible = styles.Show;
     }
+    let loginOverlay = null;
+    if(props.isGuest) {
+        loginOverlay = (
+            <Fragment>
+                <div className={styles.LoginOverlay}></div> 
+                <div className={styles.SignupOverlay}>
+                    <a href="https://www.themoviedb.org/" target="_blank" >Sign Up</a>
+                    <p>Store, View &amp; Access Movies from personal Favorites, Rated, WatchList, and Lists Pages</p>
+                </div>
+            </Fragment>
+        );
+    }
     return (
         <div className={[styles.UserControls, visible].join(' ')}>
             <div className={styles.ControlsContainer}>
@@ -41,7 +53,9 @@ const userControls = (props) => {
                 addList={props.addList}
                 showItems={props.showItems}
                 closeControls={props.toggleShowControls}
-                showHandler={props.showHandler} />
+                showHandler={props.showHandler}
+                isGuest={props.isGuest} />
+            {loginOverlay}
         </div>
     );
 };

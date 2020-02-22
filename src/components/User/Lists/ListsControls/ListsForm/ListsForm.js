@@ -16,6 +16,7 @@ const listsForm = (props) => {
 
     return (
         <div className={[styles.ListsForm, visible].join(' ')}>
+            <header>Create New List</header>
             <input 
                 type="text" 
                 placeholder="Title" 

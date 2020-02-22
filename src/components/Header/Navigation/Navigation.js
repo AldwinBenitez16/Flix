@@ -15,7 +15,7 @@ const navigation = (props) => {
         userNav = <NavigationItem path="/user">{props.IdData.username}</NavigationItem>;
     }                                                                                   
     if(props.isGuest) {
-        userNav = <NavigationItem path="/home" active="Guest">Guest</NavigationItem>;
+        userNav = <NavigationItem path="/user" active="Guest">Guest</NavigationItem>;
     }
     return(
         <nav className={props.navStyles}>
