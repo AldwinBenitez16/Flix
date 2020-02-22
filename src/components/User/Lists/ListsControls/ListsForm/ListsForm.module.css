@@ -5,20 +5,19 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
-    margin-top: 50px;
     width: 100%;
     color: #4632c2;
-    border: 1px solid #4632c2;
     background-color: rgba(150, 140, 209, .3);
 }
 
 .ListsForm input,
 .ListsForm textarea {
     box-sizing: border-box;
-    width: 80%;
+    width: 100%;
     border: none;
     padding: 10px;
     margin: 5px 0;
+    max-width: 350px;
 } 
 
 .ListsForm textarea {
@@ -28,8 +27,9 @@
 .UpdatedButton {
     height: 25px;
     margin: 5px 0;
-    width: 80%;
-    background-color: #ccc;
+    width: 100%;
+    background-color: #c97793;
+    max-width: 350px;
 }
 
 .Hide {

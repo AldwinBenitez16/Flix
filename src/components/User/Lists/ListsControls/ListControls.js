@@ -27,12 +27,6 @@ const listControls = (props) => {
                 showItems={props.showItems}
                 toggleLists={props.toggleShowLists}
                 toggleShowForm={props.toggleShowForm}/>
-            <ListsForm 
-                title={props.titleValue}
-                desc={props.descValue}
-                show={props.showForm} 
-                changeFormKey={props.changeFormKey}
-                createNewList={props.createNewList}/>
         </div>
     );
 };

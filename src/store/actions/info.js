@@ -206,11 +206,12 @@ export const createNewList = (sessionID, name, description) => {
             }
         })
             .then(res => {
+                console.log(res);
                 let id = res.data.list_id;
                 let data = {
                     description,
                     name,
-                    listItemS: [],
+                    listItems: [],
                     id
                 }
                 dispatch(createNewListSuccess(res.data.list_id, {[id]: data}));

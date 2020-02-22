@@ -120,7 +120,10 @@ const reducer = (state=initialState, action) => {
         case actionTypes.CREATE_NEW_LIST_SUCCESS:
             id = action.id;
             updatedAccountLists = state.accountLists;
-            updatedAccountLists[id] = action.data;
+            updatedAccountLists = {
+                ...updatedAccountLists,
+                ...action.data
+            };
             return {
                 ...state,
                 accountLists: updatedAccountLists
@@ -179,7 +182,11 @@ const reducer = (state=initialState, action) => {
         case actionTypes.ADD_STATE_MEDIA:
             id = action.mediaID;
             stateType = action.stateType;
-            updatedState = state.mediaItems[stateType][action.mediaType];
+            let mediaType = action.mediaType;
+            if(mediaType === 'movie') {
+                mediaType = 'movies';
+            }
+            updatedState = state.mediaItems[stateType][mediaType];
             updatedState.push(action.data);
             return {
                 ...state,

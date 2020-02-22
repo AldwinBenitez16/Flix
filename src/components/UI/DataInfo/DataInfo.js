@@ -20,6 +20,10 @@ const dataInfo = (props) => {
     let dataStyles = styles.DataInfo;
     let dataTitle = styles.DataTitle;
     let addClass = [];
+    let title = props.title;
+    if(props.type) {
+        title = `${props.title} ${'-' + ' ' + capitalize(props.type)}`;
+    }
     if(props.addClass) {
         addClass = props.addClass;
     }
@@ -58,7 +62,7 @@ const dataInfo = (props) => {
     return (
         <div className={[dataStyles, ...addClass].join(' ')}>
             <div className={dataTitle}>
-                <h2>{`${props.title} ${'-' + ' ' + capitalize(props.type)}`}</h2>
+                <h2>{title}</h2>
             </div>
             {dataItems}
             {pagination}

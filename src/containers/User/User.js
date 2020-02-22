@@ -22,11 +22,11 @@ class User extends Component {
 
     state = {
         Lists: {
-            show: true,
+            show: false,
             showListItems: {}
         },
         Favorites: {
-            show: false,
+            show: true,
             page: 1
         },
         WatchList: {
@@ -38,12 +38,12 @@ class User extends Component {
             page: 1
         },
         controls: {
-            show: true
+            show: false
         }
     }
 
     componentDidMount() {
-        const {user, onFetchAccountDetails, onFetchAccountLists, onFetchAccountMediaState, sessionID, accountLists, accountID, mediaItems, medisIsFetched} = this.props;
+        const {user, isGuest, onFetchAccountDetails, onFetchAccountLists, onFetchAccountMediaState, sessionID, accountLists, accountID, mediaItems, medisIsFetched} = this.props;
         if(user.accountID === null) {
             onFetchAccountDetails(sessionID);
         }
@@ -205,7 +205,8 @@ const mapStateToProps = state => {
         sessionID: state.auth.sessionIdData.session_id,
         accountLists: state.info.accountLists,
         mediaItems: state.info.mediaItems,
-        medisIsFetched: state.info.mediaIsFetched
+        medisIsFetched: state.info.mediaIsFetched,
+        isGuest: state.auth.guestAuth
     };
 };
 

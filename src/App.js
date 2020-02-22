@@ -42,7 +42,7 @@ class App extends Component {
     );
 
     let userRoute = null;
-    if(this.props.isAuth) {
+    if(this.props.isAuth || this.props.isGuest) {
       userRoute = <Route path="/user" component={User} />;
     }
 
