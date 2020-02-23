@@ -85,7 +85,7 @@ class ListItem extends Component {
         if(this.props.type === 'info') {
             let listItems = accountLists[this.props.id].listItems;
             let isRated = false;
-            listItems.map(item => {
+            listItems.forEach(item => {
                 if(item.id === parseInt(mediaID)) {
                     isRated = true;
                 }

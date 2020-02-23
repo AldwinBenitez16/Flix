@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios, { apiKey } from '../../shared/Axios/axios';
+import axios from '../../shared/Axios/axios';
 
 import Overlay from '../../components/UI/Overlay/Overlay';
 import Spinner from '../../components/UI/Spinner/Spinner';

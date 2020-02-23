@@ -1,5 +1,5 @@
 // Dependencies
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import axios from '../../shared/Axios/axios';
 
 class withData extends Component {

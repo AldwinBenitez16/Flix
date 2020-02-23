@@ -1,7 +1,7 @@
 // Dependencies
 import React, { Component } from 'react';
-import axios, { apiKey } from '../../shared/Axios/axios';
 import { connect } from 'react-redux';
+import { apiKey } from '../../shared/Axios/axios';
 import * as actions from '../../store/actions/index';
 
 // Components

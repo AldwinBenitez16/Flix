@@ -146,7 +146,7 @@ class Authentication extends Component {
             redirect = <Redirect to='/user' />;
         }
         if(this.props.isGuest) {
-            redirect = <Redirect to='/home'/>;
+            redirect = <Redirect to='/user'/>;
         }
         const loginFormArray = [];
         for(let key in this.state.loginForm) {

@@ -1,10 +1,9 @@
 // Dependencies
-import React, { Component, Fragment } from 'react';
+import React, { Component} from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../../store/actions/index';
 
 // Components
-import ListControls from './ListsControls/ListControls';
 import ListsPages from './ListPages/ListPages';
 
 import styles from './Lists.module.css';

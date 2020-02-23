@@ -9,6 +9,7 @@ const footer = () => {
     return ( 
         <div className={styles.Footer}>
             <a
+                rel="noopener noreferrer"
                 target="_blank"
                 href="https://www.themoviedb.org/" 
                 className={styles.TMDBLogo} >
@@ -18,10 +19,12 @@ const footer = () => {
             </a>
             <div className={styles.Icons}>
                 <a 
+                    rel="noopener noreferrer"
                     title="View GitHub"
                     target="_blank" 
                     href="https://github.com/AldwinBenitez16"><GitIcon /></a>
                 <a 
+                    rel="noopener noreferrer"
                     title="View Source"
                     target="_blank" 
                     href="https://github.com/AldwinBenitez16/flix"><SourceIcon /></a>

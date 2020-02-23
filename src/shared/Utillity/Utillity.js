@@ -29,7 +29,6 @@ export const checkValidity = (value , rules) => {
 };
 
 export const ternary = (check, backup, alternative) => {
-    console.log();
     if(check && alternative) {
         return alternative;
     } 

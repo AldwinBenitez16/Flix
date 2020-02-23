@@ -1,6 +1,5 @@
 // Dependencies
 import React, { Component, Fragment } from 'react';
-import { Switch, Route } from 'react-router-dom';
 
 // Components 
 import Spinner from '../../UI/Spinner/Spinner';

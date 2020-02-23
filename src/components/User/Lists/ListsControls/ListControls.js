@@ -3,7 +3,6 @@ import React from 'react';
 
 // Components
 import ListsDropdown from './ListsDropdown/ListsDropdown';
-import ListsForm from './ListsForm/ListsForm'
 
 // CSS
 import styles from './ListControls.module.css';

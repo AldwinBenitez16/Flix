@@ -7,15 +7,10 @@ import DataInfo from '../../UI/DataInfo/DataInfo';
 
 import styles from './UserPage.module.css';
 
-// HOC
-import DataWrapper from '../../../hoc/DataWrapper/DataWrapper';
-
 class UserPage extends Component {
     render() {
         const {
             show,
-            moviePath,
-            tvPath,
             title,
             stateType,
             viewInfo,

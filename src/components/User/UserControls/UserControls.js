@@ -32,7 +32,7 @@ const userControls = (props) => {
             <Fragment>
                 <div className={styles.LoginOverlay}></div> 
                 <div className={styles.SignupOverlay}>
-                    <a href="https://www.themoviedb.org/" target="_blank" >Sign Up</a>
+                    <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">Sign Up</a>
                     <p>Store, View &amp; Access Movies from personal Favorites, Rated, WatchList, and Lists Pages</p>
                 </div>
             </Fragment>

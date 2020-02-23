@@ -7,14 +7,11 @@ import { withRouter } from 'react-router-dom';
 import DropdownDrawer from './Sidedrawer/DropdownDrawer/DropdownDrawer';
 import Logo from './Logo/Logo';
 import Navigation from './Navigation/Navigation';
-import SearchInput from './SearchInput/SearchInput';
 import DropdownSearch from './SearchInput/DropdownSearch/DropdownSearch';
-import NavigationItem from './Navigation/NavigationItem/NavigationItem';
 
 // CSS
 import styles from './Header.module.css';
 import navStyles from '../../shared/Styles/Navigation.module.css';
-import searchStyles from '../../shared/Styles/Search.module.css';
 
 const header = (props) => {
     let dropdownSearchContent = <div className={styles.Fill}></div>;

@@ -1,11 +1,9 @@
 // Dependencies
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import { apiKey } from '../../shared/Axios/axios';
 import * as actions from '../../store/actions/index';
 
 // Components
-import Spinner from '../../components/UI/Spinner/Spinner';
 import Lists from '../../components/User/Lists/Lists';
 import UserPage from '../../components/User/UserPage/UserPage';
 import UserControls from '../../components/User/UserControls/UserControls';
@@ -43,7 +41,7 @@ class User extends Component {
     }
 
     componentDidMount() {
-        const {user, isGuest, onFetchAccountDetails, onFetchAccountLists, onFetchAccountMediaState, sessionData, accountLists, accountID, mediaItems, medisIsFetched} = this.props;
+        const {user, onFetchAccountDetails, onFetchAccountLists, onFetchAccountMediaState, sessionData, accountLists, accountID, medisIsFetched} = this.props;
         
         let sessionID = null;
         if(sessionData) {
@@ -218,7 +216,6 @@ const mapStateToProps = state => {
         loading: state.user.loading,
         sessionData: state.auth.sessionIdData,
         accountLists: state.info.accountLists,
-        mediaItems: state.info.mediaItems,
         medisIsFetched: state.info.mediaIsFetched,
         isGuest: state.auth.guestAuth
     };

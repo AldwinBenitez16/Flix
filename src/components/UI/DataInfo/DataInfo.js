@@ -1,6 +1,6 @@
 // Dependencies
 import React from 'react';
-import { ternary, capitalize } from '../../../shared/Utillity/Utillity';
+import { ternary } from '../../../shared/Utillity/Utillity';
 import { connect } from 'react-redux';
 
 // Components

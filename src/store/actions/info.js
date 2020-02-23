@@ -54,7 +54,7 @@ export const fetchAccountLists = (accountID, sessionID) => {
         dispatch(Start());
         userAxios.get(`/account/${accountID}/lists?api_key=${apiKey}&language=en-US&session_id=${sessionID}&page=1`)
             .then(res => {
-                res.data.results.map(list => {
+                res.data.results.forEach(list => {
                     axios.get(`/list/${list.id}?api_key=${apiKey}&language=en-US`)
                         .then(res => {      
                             let accountList = {

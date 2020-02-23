@@ -1,5 +1,5 @@
 // Dependencies
-import React, { Component } from 'react';
+import React from 'react';
 
 // Components
 import Spinner from '../../../UI/Spinner/Spinner';

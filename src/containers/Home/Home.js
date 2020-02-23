@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { apiKey } from '../../shared/Axios/axios'; 
 
 import SearchInput from '../../components/Header/SearchInput/SearchInput';

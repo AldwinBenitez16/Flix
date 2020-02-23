@@ -1,5 +1,4 @@
 import * as actionTypes from '../actions/actionTypes';
-import { updateObject } from '../../shared/Utillity/Utillity';
 
 const initialState = {
     mediaIsFetched: false,
@@ -146,7 +145,7 @@ const reducer = (state=initialState, action) => {
                     ...state.mediaState,
                     [action.mediaID]: {
                         ...state.mediaState[action.mediaID],
-                        ['rated']: {
+                        'rated': {
                             value: parseInt(action.value)
                         }
                     }
@@ -160,7 +159,7 @@ const reducer = (state=initialState, action) => {
                     ...state.mediaState,
                     [action.mediaID]: {
                         ...state.mediaState[action.mediaID],
-                        ['rated']: false
+                        'rated': false
                     }
                 }
             };

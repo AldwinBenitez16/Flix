@@ -27,7 +27,6 @@ const listsDropdown = (props) => {
         if(accountListsArray.length > 0) {
             listsContent = accountListsArray.map(list => {
                 let name = list.name;
-                console.log(list);
                 if(props.listType === 'info') {
                     if(name.length >= 20) {
                         name = name.substring(0, 17) + '...';
