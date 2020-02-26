@@ -34,8 +34,7 @@ class WallpaperWrapper extends Component {
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
-            position: 'relative',
-            height: 'calc(100vh - 150px)'
+            position: 'relative'
         };
         let WallpaperContent = (
             <div className={styles.Loading}>

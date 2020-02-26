@@ -1,5 +1,6 @@
 .WallPaperWrapper {
     margin: 0;
+    height: calc(100vh - 100px);
 }
 
 .Loading {
@@ -15,5 +16,6 @@
 @media(min-width: 768px) {
     .WallPaperWrapper {
         margin: 25px;
+        height: calc(100vh - 150px);
     }
 }
