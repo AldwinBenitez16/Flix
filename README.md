@@ -4,6 +4,7 @@ ________________
 Netlify Link: https://flix-movies.netlify.com
 
 What is ReactMedia ?
+
 ReactMedia is a website made using React and the RESTful API, "The Movie Database"(https://www.themoviedb.org/). ReactMedia uses react router for navigation, redux for state management and axios to make api calls.
 
 Main Functionality
