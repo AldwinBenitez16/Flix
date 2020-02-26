@@ -1,7 +1,7 @@
 ReactMedia
 ________________
 
-Netlify Link: https://flix-movies.netlify.com
+Netlify Link: https://reactmedia.netlify.com/#/home
 
 What is ReactMedia ?
 
